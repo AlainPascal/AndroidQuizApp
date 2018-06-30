@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+
+    <string name="q1">Question 1</string>
+    <string name="question_one">Who is the founder of Android?</string>
+    <string name="answer_one_hint">Enter Your Answer Here</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_view_answer">View Answer</string>
+    <string name="q2">Question 2</string>
+    <string name="q3">Question 3</string>
+    <string name="q4">Question 4</string>
+    <string name="q5">Question 5</string>
+    <string name="question_two">Android Apps can only be developed in Java. True or False.</string>
+    <string name="radioTrue">True</string>
+    <string name="radioFalse">False</string>
+    <string name="question_three">What is the IDE for developing Android Apps? Select your answer.</string>
+    <string name="netbeans">NetBeans</string>
+    <string name="android_studio">Android Studio</string>
+    <string name="codeBlocks">Code::Blocks</string>
+    <string name="question_four">What is Android?</string>
+    <string name="answer_four_hint">Enter Your Answer Here</string>
+    <string name="question_five">Which attribure(s) is(are) essential for an Image View? Select all that apply.</string>
+    <string name="orientation">orientation</string>
+    <string name="src">src</string>
+    <string name="layout_width">layout_width</string>
+    <string name="scaleType">scaleType</string>
+    <string name="fontFamily">fontFamily</string>
+    <string name="textColor">textColor</string>
+</resources>
