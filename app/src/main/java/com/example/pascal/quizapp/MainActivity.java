@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     String answerOne = "Andy Rubin";
     String answerTwo = "False";
     String answerThree = "Android Studio";
+    String answerFour = "Android is an open-source operating system for smartphones, tablet computers, etc.";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,5 +132,30 @@ public class MainActivity extends AppCompatActivity {
     public void viewAnswerThree(View view) {
         // This will display a toast message with the correct answer
         Toast.makeText(this, "The IDE for developing Android Apps is " + answerThree + ".", Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * This method is called when the 'submit' button for Question 4 is clicked
+     */
+    public void submitQuestionFour(View view) {
+        EditText answerFourTextField = findViewById(R.id.edit_text_q4);
+        String userAnswerFour = answerFourTextField.getText().toString();
+
+        // Checking if the user has given an answer
+        if (userAnswerFour.isEmpty()) {
+            Toast.makeText(this, "Please provide your answer.", Toast.LENGTH_SHORT).show();
+        } else {
+            score += 1;
+
+            Toast.makeText(this, "Nice try! You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * This method is called when the 'view answer' button  for Question 4 is clicked
+     */
+    public void viewAnswerFour(View view) {
+        // This will display a toast message with the correct answer
+        Toast.makeText(this, answerFour, Toast.LENGTH_SHORT).show();
     }
 }
