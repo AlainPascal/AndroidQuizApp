@@ -26,4 +26,5 @@
     <string name="scaleType">scaleType</string>
     <string name="fontFamily">fontFamily</string>
     <string name="textColor">textColor</string>
+    <string name="overall">View Overall Score</string>
 </resources>

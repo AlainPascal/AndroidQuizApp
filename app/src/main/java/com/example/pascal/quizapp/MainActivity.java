@@ -191,4 +191,8 @@ public class MainActivity extends AppCompatActivity {
         // This will display a toast message with the correct answer
         Toast.makeText(this, answerFive, Toast.LENGTH_SHORT).show();
     }
+
+    public void viewOverallScore(View view) {
+        Toast.makeText(this, "Your overall score is " + score + "/5. Good Job!", Toast.LENGTH_SHORT).show();
+    }
 }
