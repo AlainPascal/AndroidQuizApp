@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     String answerOne = "Andy Rubin";
     String answerTwo = "False";
+    String answerThree = "Android Studio";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,20 +52,24 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the 'submit' button for Question 2 is clicked
      */
     public void submitQuestionTwo(View view) {
+        // Declaring variable to hold user's answer for Question 2
         String userAnswerTwo = "";
 
+        // Checking if the user has checked False and assigning it to the declared variable
         RadioButton radioButtonFalse = findViewById(R.id.radio_button_false);
         boolean radioFalse = radioButtonFalse.isChecked();
         if (radioFalse) {
             userAnswerTwo = "False";
         }
 
+        // Checking if the user has checked True and assigning it to the declared variable
         RadioButton radioButtonTrue = findViewById(R.id.radio_button_true);
         boolean radioTrue = radioButtonTrue.isChecked();
         if (radioTrue) {
             userAnswerTwo = "True";
         }
 
+        // Comparing user's answer and the correct answer for Question 2
         if (userAnswerTwo.equals(answerTwo)) {
             score += 1;
 
@@ -82,5 +87,49 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, answerTwo + ". Android Apps can also be developed in other programming languages such C/C++, Kotlin.", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * This method is called when the 'submit' button for Question 3 is clicked
+     */
+    public void submitQuestionThree(View view) {
+        // Declaring variable to hold user's answer for Question 3
+        String userAnswerThree = "";
 
+        // Checking if the user has selected NetBeans and assigning it to the declared variable
+        RadioButton radioButtonNetBeans = findViewById(R.id.radio_button_netBeans);
+        boolean radioNetBeans = radioButtonNetBeans.isChecked();
+        if (radioNetBeans) {
+            userAnswerThree = "NetBeans";
+        }
+
+        // Checking if the user has selected Android Studio and assigning it to the declared variable
+        RadioButton radioButtonAndroidStudio = findViewById(R.id.radio_button_androidStudio);
+        boolean radioAndroidStudio = radioButtonAndroidStudio.isChecked();
+        if (radioAndroidStudio) {
+            userAnswerThree = "Android Studio";
+        }
+
+        // Checking if the user has selected Code::Blocks and assigning it to the declared variable
+        RadioButton radioButtonCodeBlocks = findViewById(R.id.radio_button_codeBlocks);
+        boolean radioCodeBlocks = radioButtonCodeBlocks.isChecked();
+        if (radioCodeBlocks) {
+            userAnswerThree = "Code::Blocks";
+        }
+
+        // Comparing user's answer and the correct answer for Question 3
+        if (userAnswerThree.equals(answerThree)) {
+            score += 1;
+
+            Toast.makeText(this, "Correct! You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Sorry, you got it wrong. You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * This method is called when the 'view answer' button  for Question 3 is clicked
+     */
+    public void viewAnswerThree(View view) {
+        // This will display a toast message with the correct answer
+        Toast.makeText(this, "The IDE for developing Android Apps is " + answerThree + ".", Toast.LENGTH_SHORT).show();
+    }
 }
