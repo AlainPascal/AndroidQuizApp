@@ -94,6 +94,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radio_button_true"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -103,6 +104,7 @@
                     android:text="@string/radioTrue" />
 
                 <RadioButton
+                    android:id="@+id/radio_button_false"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -168,14 +170,16 @@
                 android:orientation="vertical">
 
                 <RadioButton
+                    android:id="@+id/radio_button_netBeans"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:paddingStart="10dp"
-                    android:text="@string/netbeans" />
+                    android:text="@string/netBeans" />
 
                 <RadioButton
+                    android:id="@+id/radio_button_androidStudio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -185,6 +189,7 @@
                     android:text="@string/android_studio" />
 
                 <RadioButton
+                    android:id="@+id/radio_button_codeBlocks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -310,6 +315,7 @@
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:id="@+id/check_box_width"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
@@ -318,6 +324,7 @@
                         android:text="@string/layout_width" />
 
                     <CheckBox
+                        android:id="@+id/check_box_src"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -327,6 +334,7 @@
                         android:text="@string/src" />
 
                     <CheckBox
+                        android:id="@+id/check_box_textColor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -337,12 +345,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
                     <CheckBox
+                        android:id="@+id/check_box_orientation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
@@ -351,6 +360,7 @@
                         android:text="@string/orientation" />
 
                     <CheckBox
+                        android:id="@+id/check_box_scaleType"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -360,6 +370,7 @@
                         android:text="@string/scaleType" />
 
                     <CheckBox
+                        android:id="@+id/check_box_font"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"

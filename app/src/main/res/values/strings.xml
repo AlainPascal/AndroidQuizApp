@@ -14,7 +14,7 @@
     <string name="radioTrue">True</string>
     <string name="radioFalse">False</string>
     <string name="question_three">What is the IDE for developing Android Apps? Select your answer.</string>
-    <string name="netbeans">NetBeans</string>
+    <string name="netBeans">NetBeans</string>
     <string name="android_studio">Android Studio</string>
     <string name="codeBlocks">Code::Blocks</string>
     <string name="question_four">What is Android?</string>
