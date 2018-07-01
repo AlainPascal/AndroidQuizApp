@@ -3,6 +3,7 @@ package com.example.pascal.quizapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     String answerTwo = "False";
     String answerThree = "Android Studio";
     String answerFour = "Android is an open-source operating system for smartphones, tablet computers, etc.";
+    String answerFive = "layout_width, src, scaleType";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
             score += 1;
 
             // This will display a toast message saying that the answer is correct and display the score
-            Toast.makeText(this, "Correct! You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         } else {
             // This will display a toast message saying that the answer is incorrect and display the score
-            Toast.makeText(this, "Sorry, you got it wrong. You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -74,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         if (userAnswerTwo.equals(answerTwo)) {
             score += 1;
 
-            Toast.makeText(this, "Correct! You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Sorry, you got it wrong. You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -120,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
         if (userAnswerThree.equals(answerThree)) {
             score += 1;
 
-            Toast.makeText(this, "Correct! You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Sorry, you got it wrong. You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -147,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             score += 1;
 
-            Toast.makeText(this, "Nice try! You scored: " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nice try! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -157,5 +159,36 @@ public class MainActivity extends AppCompatActivity {
     public void viewAnswerFour(View view) {
         // This will display a toast message with the correct answer
         Toast.makeText(this, answerFour, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * This method is called when the 'submit' button for Question 5 is clicked
+     */
+    public void submitQuestionFive(View view) {
+        CheckBox checkBoxWidth = findViewById(R.id.check_box_width);
+        boolean checkWidth = checkBoxWidth.isChecked();
+
+        CheckBox checkBoxSrc = findViewById(R.id.check_box_src);
+        boolean checkSrc = checkBoxSrc.isChecked();
+
+        CheckBox checkBoxScaleType = findViewById(R.id.check_box_scaleType);
+        boolean checkScaleType = checkBoxScaleType.isChecked();
+
+        // Checking if the user has selected the right check boxes
+        if (checkWidth && checkSrc && checkScaleType) {
+            score += 1;
+
+            Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    /**
+     * This method is called when the 'view answer' button  for Question 5 is clicked
+     */
+    public void viewAnswerFive(View view) {
+        // This will display a toast message with the correct answer
+        Toast.makeText(this, answerFive, Toast.LENGTH_SHORT).show();
     }
 }
