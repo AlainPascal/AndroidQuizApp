@@ -1,3 +1,9 @@
+/*
+ * Created by ISHIMWE Alain Pascal on 8/7/18 1:15 PM
+ * Copyright (c) 2018 . All rights reserved.
+ * Last modified 8/7/18 1:02 PM
+ */
+
 package com.example.pascal.quizapp;
 
 import android.os.Bundle;
@@ -10,12 +16,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int score = 0;
-    String answerOne = "Andy Rubin";
-    String answerTwo = "False";
-    String answerThree = "Android Studio";
-    String answerFour = "Android is an open-source operating system for smartphones, tablet computers, etc.";
-    String answerFive = "layout_width, src, scaleType";
+    private int score = 0;
+    private String answerOne = "Andy Rubin";
+    private String answerTwo = "False";
+    private String answerThree = "Android Studio";
+    private String answerFour = "Android is an open-source operating system for smartphones, tablet computers, etc.";
+    private String answerFive = "layout_width, src, scaleType";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
