@@ -1,7 +1,7 @@
 /*
- * Created by ISHIMWE Alain Pascal on 8/7/18 1:15 PM
+ * Created by ISHIMWE Alain Pascal
  * Copyright (c) 2018 . All rights reserved.
- * Last modified 8/7/18 1:02 PM
+ * Last modified 8/7/18 1:46 PM
  */
 
 package com.example.pascal.quizapp;
@@ -180,11 +180,23 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBoxScaleType = findViewById(R.id.check_box_scaleType);
         boolean checkScaleType = checkBoxScaleType.isChecked();
 
+        CheckBox checkBoxColor = findViewById(R.id.check_box_textColor);
+        boolean checkColor = checkBoxColor.isChecked();
+
+        CheckBox checkBoxOrientation = findViewById(R.id.check_box_orientation);
+        boolean checkOrientation = checkBoxOrientation.isChecked();
+
+        CheckBox checkBoxFont = findViewById(R.id.check_box_font);
+        boolean checkFont = checkBoxFont.isChecked();
+
+
         // Checking if the user has selected the right check boxes
-        if (checkWidth && checkSrc && checkScaleType) {
+        if (checkWidth && checkSrc && checkScaleType && !checkColor && !checkOrientation && !checkFont) {
             score += 1;
 
             Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+
         } else {
             Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
         }

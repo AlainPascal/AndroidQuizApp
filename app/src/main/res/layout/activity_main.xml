@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by ISHIMWE Alain Pascal
+  ~ Copyright (c) 2018 . All rights reserved.
+  ~ Last modified 8/7/18 1:32 PM
+  -->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -46,6 +52,7 @@
                 android:layout_marginTop="5dp">
 
                 <Button
+                    android:id="@+id/button_submit_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -122,6 +129,7 @@
                 android:layout_marginTop="5dp">
 
                 <Button
+                    android:id="@+id/button_submit_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -206,6 +214,7 @@
                 android:orientation="horizontal">
 
                 <Button
+                    android:id="@+id/button_submit_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -261,6 +270,7 @@
                 android:layout_marginTop="5dp">
 
                 <Button
+                    android:id="@+id/button_submit_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -387,6 +397,7 @@
                 android:layout_marginTop="5dp">
 
                 <Button
+                    android:id="@+id/button_submit_five"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
