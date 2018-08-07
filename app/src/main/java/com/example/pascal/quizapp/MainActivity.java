@@ -1,7 +1,7 @@
 /*
  * Created by ISHIMWE Alain Pascal
  * Copyright (c) 2018 . All rights reserved.
- * Last modified 8/7/18 1:46 PM
+ * Last modified 8/7/18 2:19 PM
  */
 
 package com.example.pascal.quizapp;
@@ -9,6 +9,7 @@ package com.example.pascal.quizapp;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         EditText answerOneTextField = findViewById(R.id.edit_text_q1);
         String userAnswerOne = answerOneTextField.getText().toString();
 
+        Button buttonSubmitOne = findViewById(R.id.button_submit_one);
+
         // Comparing the user's answer with the correct answer
         if (userAnswerOne.equals(answerOne)) {
             // If the answer is correct then we add 1 to the user's score
@@ -43,9 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
             // This will display a toast message saying that the answer is correct and display the score
             Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitOne.setClickable(false);
         } else {
             // This will display a toast message saying that the answer is incorrect and display the score
             Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitOne.setClickable(false);
         }
     }
 
@@ -78,13 +87,21 @@ public class MainActivity extends AppCompatActivity {
             userAnswerTwo = "True";
         }
 
+        Button buttonSubmitTwo = findViewById(R.id.button_submit_two);
+
         // Comparing user's answer and the correct answer for Question 2
         if (userAnswerTwo.equals(answerTwo)) {
             score += 1;
 
             Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitTwo.setClickable(false);
         } else {
             Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitTwo.setClickable(false);
         }
     }
 
@@ -124,13 +141,21 @@ public class MainActivity extends AppCompatActivity {
             userAnswerThree = "Code::Blocks";
         }
 
+        Button buttonSubmitThree = findViewById(R.id.button_submit_three);
+
         // Comparing user's answer and the correct answer for Question 3
         if (userAnswerThree.equals(answerThree)) {
             score += 1;
 
             Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitThree.setClickable(false);
         } else {
             Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitThree.setClickable(false);
         }
     }
 
@@ -149,6 +174,8 @@ public class MainActivity extends AppCompatActivity {
         EditText answerFourTextField = findViewById(R.id.edit_text_q4);
         String userAnswerFour = answerFourTextField.getText().toString();
 
+        Button buttonSubmitFour = findViewById(R.id.button_submit_four);
+
         // Checking if the user has given an answer
         if (userAnswerFour.isEmpty()) {
             Toast.makeText(this, "Please provide your answer.", Toast.LENGTH_SHORT).show();
@@ -156,6 +183,9 @@ public class MainActivity extends AppCompatActivity {
             score += 1;
 
             Toast.makeText(this, "Nice try! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitFour.setClickable(false);
         }
     }
 
@@ -189,6 +219,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBoxFont = findViewById(R.id.check_box_font);
         boolean checkFont = checkBoxFont.isChecked();
 
+        Button buttonSubmitFive = findViewById(R.id.button_submit_five);
 
         // Checking if the user has selected the right check boxes
         if (checkWidth && checkSrc && checkScaleType && !checkColor && !checkOrientation && !checkFont) {
@@ -196,9 +227,13 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(this, "Correct! You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
 
-
+            // This will disable button after submitting the answer
+            buttonSubmitFive.setClickable(false);
         } else {
             Toast.makeText(this, "Sorry, you got it wrong. You scored " + score + " points out of 5.", Toast.LENGTH_SHORT).show();
+
+            // This will disable button after submitting the answer
+            buttonSubmitFive.setClickable(false);
         }
     }
 
